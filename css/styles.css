@@ -37,6 +37,7 @@ img {
 .section {
      padding: 120px 0;
 }
+
 .container { 
      box-sizing: border-box;
      width: 1158px;
@@ -89,10 +90,8 @@ img {
      font-size: 16px;
      line-height: 1.5;
      letter-spacing: 0.02em;
-     text-decoration: underline;
      color: #2e2f42;
      padding: 24px 0;
-     
 }
 
 .link-title:hover, .link-title:focus {
@@ -139,7 +138,7 @@ img {
 /* Title and button */
 
 .section-title {
-     display: block;
+    display: flex;
     background-color: #2e2f42;
     color: #fff;
     padding: 188px 0;
@@ -156,7 +155,8 @@ img {
      color: #FFFFFF;
      margin-bottom: 30px;
      max-width: 496px;
-
+     margin: 0 auto;
+     padding-bottom: 48px;
 }
 
 .button-title {
@@ -175,6 +175,7 @@ img {
      border-radius: 4px;
      min-width: 169px;
      height: 56px;
+     margin: 0 auto;
 }
 
 .button-title:hover {
@@ -225,7 +226,6 @@ img {
      letter-spacing: 0.02em;
      color: #2e2f42;
      margin-bottom: 8px;
-     text-align: center;
 }
 .spdt-title-section {
      font-family: "Roboto", sans-serif;
@@ -233,7 +233,6 @@ img {
      font-size: 16px;
      letter-spacing: 0.02em;
      line-height: 1.5;
-     text-align: center;
 }
 
 .section-spdt {
@@ -260,7 +259,6 @@ img {
 
 .name-photo {
      padding: 32px 0;
-     margin-bottom: 8px;
 }
 .item {
      width: calc((100% - 72px) / 4);
@@ -290,8 +288,7 @@ img {
      display: flex;
      background-color: #F4F4FD;
      padding: 120px 0;
-     text-align: center;
-     margin-bottom: 40px;
+     text-align: center; 
 }
 
 .port-list {
@@ -302,7 +299,6 @@ img {
      padding: 32px 16px;
      border: 1px solid #e7e9fc;
      border-top: none;
-     margin-bottom: 8px;
 }
 /* footer */
 
@@ -316,6 +312,7 @@ img {
      color: #F4F4FD;
      line-height: 1.5;
      letter-spacing: 0.02em;
+     max-width: 298px;
 }
 
 .footer-title-logo {
