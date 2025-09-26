@@ -7,6 +7,8 @@
   background-color: #ffffff;
   padding: 20px 0;
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 body {
@@ -41,6 +43,7 @@ ul {
 
 img {
   display: block;
+  width: 100%;
 }
 
 .section {
@@ -89,6 +92,23 @@ img {
   padding: 15px 0;
 }
 
+.header-list {
+  position: relative;
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-list::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  height: 4px;
+  left: 0;
+  background-color: #404bbf;
+  border-radius: 2px;
+}
+
 .logo-title-logo {
   color: #2e2f42;
 }
@@ -116,6 +136,7 @@ img {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-title-tel:hover {
@@ -149,10 +170,18 @@ img {
 .section-title {
   display: flex;
   background-color: #2e2f42;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(/images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: #fff;
   padding: 188px 0;
+}
+.section-title .conteiner {
 }
 
 .heading-title {
@@ -187,8 +216,7 @@ img {
   min-width: 169px;
   height: 56px;
   margin: 0 auto;
-  transition: color 1000ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-title:hover {
@@ -242,6 +270,18 @@ img {
   font-size: 16px;
   letter-spacing: 0.02em;
   line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.svg-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  margin-bottom: 8px;
 }
 
 .section-spdt {
@@ -298,6 +338,7 @@ img {
 
 .port-list {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .port-list:hover {
@@ -312,25 +353,55 @@ img {
   border-top: none;
 }
 
-.svg-spdt {
-  border: 1px solid #8e8f99;
-  border-radius: 8px;
-}
-
 .svg-icon {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
   padding: 8px 16px 32px;
   cursor: pointer;
 }
 
 .svg-a {
-  fill: currentColor;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
-.svg-a {
-  color: aqua;
+.svg-footer {
+  width: 40px;
+  height: 40px;
+}
+
+.svg-link {
+  fill: #f4f4fd;
+}
+
+.port-transform {
+  position: relative;
+  overflow: hidden;
+}
+
+.port-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.port-transform:hover .port-overlay {
+  transform: translateY(0);
 }
 /* footer */
 
@@ -368,4 +439,11 @@ img {
   color: #f4f4fd;
   line-height: 150%;
   letter-spacing: 0.02em;
+}
+
+.footer-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
 }
