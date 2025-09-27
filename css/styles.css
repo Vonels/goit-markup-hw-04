@@ -351,6 +351,7 @@ img {
 
 .svg-icon {
   display: flex;
+  justify-content: center;
   gap: 16px;
   cursor: pointer;
 }
