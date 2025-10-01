@@ -89,12 +89,8 @@ img {
   margin: 0;
   gap: 40px;
 }
-.nav-page a.active {
-  color: #404bbf;
-  position: relative;
-}
 
-.page-nav a.active::after {
+.page-nav .link-title.active::after {
   content: "";
   width: 100%;
   position: absolute;
@@ -107,6 +103,11 @@ img {
 
 .logo-title-logo {
   color: #2e2f42;
+}
+
+.link-title.active {
+  color: #404bbf;
+  position: relative;
 }
 
 .link-title {
